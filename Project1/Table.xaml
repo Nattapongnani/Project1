@@ -2,27 +2,44 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Project1.Table"
+             xmlns:local="clr-namespace:Project1"
              Title="Table">
+
 
 
     <ScrollView>
         <CollectionView>
             <CollectionView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>Table1</x:String>
-                    <x:String>Table2</x:String>
-                    <x:String>Table3</x:String>
-                    <x:String>Table4</x:String>
-                    <x:String>Table5</x:String>
-                    <x:String>Table6</x:String>
-                    <x:String>Table7</x:String>
-                    <x:String>Table8</x:String>
-                    <x:String>Table9</x:String>
-                    <x:String>Table10</x:String>
+                    <x:String>Table 1</x:String>
+                    <x:String>Table 2</x:String>
+                    <x:String>Table 3</x:String>
+                    <x:String>Table 4</x:String>
                 </x:Array>
             </CollectionView.ItemsSource>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
+                    <StackLayout>
+                        <Frame Margin="20,2" BackgroundColor="Black" BorderColor="White">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoToDetails" 
+                                />
+                            </Frame.GestureRecognizers>
+                            <StackLayout>
+                                <Label Text="{Binding .}" 
+                                       TextColor="White"
+                                       FontSize="24"
+                                       FontAttributes="Bold"
+                                       HorizontalOptions="Center"
+                                       />
+                                <Label Text="06/10 3:00PM" 
+                                       TextColor="White"
+                                       HorizontalOptions="Center"
+                                       />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                <!--
                     <StackLayout>
                         <Button Text="{Binding .}"
                             Clicked="Handle_Clicked"
@@ -32,6 +49,7 @@
                             FontAttributes="Bold"
                             TextColor="#000"/>
                     </StackLayout>
+                    -->
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

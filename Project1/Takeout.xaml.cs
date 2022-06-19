@@ -5,5 +5,6 @@ public partial class Takeout : ContentPage
 	public Takeout()
 	{
 		InitializeComponent();
+
 	}
 }

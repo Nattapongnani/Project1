@@ -49,6 +49,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="System.ObjectModel" Version="4.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Table.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
